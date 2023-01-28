@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewData["Title"] = "Update";
+}
+@model EmployeeUpdateDto
+<div class="row">
+    <div class="grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <form class="forms-sample" method="post" enctype="multipart/form-data">
+                    <div asp-validation-summary="ModelOnly"></div>
+                    <input  hidden asp-for="@Model.getDto.Id"/>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control" asp-for="@Model.postDto.Name" value="@Model.getDto.Name" placeholder="Name">
+                        <span asp-validation-for="@Model.postDto.Name"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Position</label>
+                        <input type="text" class="form-control" asp-for="@Model.postDto.Position" value="@Model.getDto.Position" placeholder="Position">
+                        <span asp-validation-for="@Model.postDto.Position"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>About</label>
+                        <input type="text" class="form-control" asp-for="@Model.postDto.About" value="@Model.getDto.About" placeholder="About">
+                        <span asp-validation-for="@Model.postDto.About"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Image</label>
+                        <input class="form-control" asp-for="@Model.postDto.formFile" placeholder="About">
+                        <span asp-validation-for="@Model.postDto.formFile"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Icon</label>
+                        <input class="form-control" asp-for="@Model.postDto.TwitterUrl" value="@Model.getDto.TwitterUrl " placeholder="TwitterUrl">
+                        <span asp-validation-for="@Model.postDto.TwitterUrl"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>InstagramUrl</label>
+                        <input class="form-control" asp-for="@Model.postDto.InstagramUrl" value="@Model.getDto.InstagramUrl" placeholder="InstagramUrl">
+                        <span asp-validation-for="@Model.postDto.InstagramUrl"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>FacebookUrl</label>
+                        <input class="form-control" asp-for="@Model.postDto.FacebookUrl" value="@Model.getDto.FacebookUrl" placeholder="FacebookUrl">
+                        <span asp-validation-for="@Model.postDto.FacebookUrl"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>LinkedinUrl</label>
+                        <input class="form-control" asp-for="@Model.postDto.LinkedinUrl" value="@Model.getDto.LinkedinUrl" placeholder="LinkedinUrl">
+                        <span asp-validation-for="@Model.postDto.LinkedinUrl"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary me-2">Submit</button>
+                    <button class="btn btn-light">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
